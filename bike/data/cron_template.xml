@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<odoo>-->
+<!--    <data>-->
+<!--        <record id="send_mail_template" model="mail.template">-->
+<!--            <field name="name">Customer Send Mail</field>-->
+<!--            <field name="model_id" ref="bike.model_customers_details"/>-->
+<!--            <field name="auto_delete" eval="False"/>-->
+<!--            <field name="subject">Regarding Cron Action</field>-->
+<!--            <field name="email_from">johnvip03@gmail.com</field>-->
+<!--            <field name="email_to">dineshkumarddk03@gmail.com</field>-->
+<!--            <field name="email_cc">linciamary96@gmail.com</field>-->
+<!--            <field name="body_html" type="html">-->
+<!--                <![CDATA[-->
+<!-- <p>Dear ${(object.name)},<br/><br/>-->
+<!-- Good job, you've just created your first e-mail template!<br/></p>-->
+<!--      Regards,<br/>-->
+<!--      ${(object.name)} ]]>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--    </data>-->
+<!--</odoo>-->
+
+
+<odoo>
+    <data>
+        <record id="send_mail_template" model="mail.template">
+            <field name="name">Customer Email Template</field>
+            <field name="model_id" ref="bike.model_customers_details"/>
+            <field name="auto_delete" eval="False"/>
+            <field name="subject">Customer Email Cron Action</field>
+            <field name="email_from">johnvip03@gmail.com</field>
+            <field name="email_to">${(object.mail)}</field>
+            <field name="email_cc">dineshkumarddk03@gmail.com</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                     Dear ${(object.name)},<br/><br/>
+                     Customer Must Be Submit Your Document Before This Month....<br/></p>
+                          Regards,<br/>
+                          ${(object.name)}
+                </div>
+            </field>
+        </record>
+         <record id="service_mail_template" model="mail.template">
+            <field name="name">Service Email Template</field>
+            <field name="model_id" ref="bike.model_service_details"/>
+            <field name="auto_delete" eval="False"/>
+            <field name="subject">Service Email Cron Action</field>
+            <field name="email_from">johnvip03@gmail.com</field>
+            <field name="email_to">${(object.custo_id.mail)}</field>
+            <field name="email_cc">johnvip03@gmail.com</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                     Dear ${(object.service_bike_name)},<br/><br/>
+                     Your bike service has completed you come to pick up ur bike ....<br/></p>
+                          Regards,<br/>
+                          ${(object.service_bike_number)}
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	<record id="customer_gender_wizard_form" model="ir.ui.view">
+            <field name="name">Customer Wizard</field>
+            <field name="model">customer.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                   <sheet>
+                   		<group>
+                   			<group>
+                   				<field name="gender" />
+                   			</group>
+                   		</group>
+                   		 <footer>
+                            <button string='Submit' name="customer_gender_wizard_report" type="object" class="btn-primary"/>
+                            <button string="Cancel" class="btn-secondary" special="cancel"/>
+                        </footer>
+                   </sheet>
+                 </form>
+              </field>
+          </record>
+
+        <record id="customer_wizard_action" model="ir.actions.act_window">
+            <field name="name">Customer Wizard</field>
+            <field name="res_model">customer.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+		<menuitem id="wizard_menu" name="Reports" parent="bike.bike_menu" sequence="4"/>
+		<menuitem id="customer_wizard_menu" name="Customer Gender Wizard" parent="wizard_menu" action="customer_wizard_action" />
+
+    </data>
+</odoo>

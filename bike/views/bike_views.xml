@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--                      Bike Form view-->
+        <record id="view_bike_form" model="ir.ui.view">
+            <field name="name">bike.details.form</field>
+            <field name="model">bike.details</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_order" type="object" string="order" class="oe_highlight" />
+                        <button name="action_progress" type="object" string="Progress" class="oe_highlight"/>
+                        <button name="action_payment" type="object" string="Payment" class="oe_highlight"/>
+                        <field name="status" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <field name="picture" widget='image' class="oe_avatar"/>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Bike's Name" required="True"/>
+                            </h1>
+                            <h2>
+                                <field name="bike_model" placeholder="Bike's Model" />
+                            </h2>
+                            <field name="engine" placeholder="Engine"/>
+                        </div>
+                        <div>
+                            <button name="sample_bike" string="Bike Wale" type="object" class="btn btn-info"/>
+                        </div>
+                        <group>
+                            <group>
+<!--                                <field name="picture" widget="image" class="oe_avatar_inline"></field>-->
+<!--                                <field name="name" placeholder="eg.Bikename"></field>-->
+<!--                                <field name="bike_model"></field>-->
+                                <field name="damage" widget="radio" options="{'horizontal': true}"></field>
+                                <field name="bike_con"></field>
+                                <field name="colours"></field>
+                                <field name="count"></field>
+                                <field name="currency_id" invisible="True"></field>
+                                <field name="amount"></field>
+
+
+                            </group>
+                            <group>
+                                <field name="year"></field>
+                                <field name="delivery_date"></field>
+                                <field name="bike_file"></field>
+                                <field name="cc"></field>
+                                <field name="details"></field>
+                                <field name="records"></field>
+                                <field name="customer_id"></field>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!--               bike records tree view-->
+
+        <record id="view_bike_tree" model="ir.ui.view">
+            <field name="name">bike.details.tree</field>
+            <field name="model">bike.details</field>
+            <field name="arch" type="xml">
+                <tree string="bike">
+                    <field name="name"></field>
+                    <field name="bike_model"></field>
+                    <field name="engine"></field>
+                    <field name="colours"></field>
+                    <field name="year"></field>
+                    <field name="damage" optional="hide"></field>
+                    <field name="bike_con" optional="hide"></field>
+                    <field name="delivery_date"></field>
+                    <field name="bike_file" optional="hide"></field>
+                    <field name="cc"></field>
+                    <field name="details" optional="show"></field>
+                    <field name="customer_id"></field>
+                </tree>
+            </field>
+        </record>
+
+        <!--        bikes record graph view-->
+
+        <record id="bike_view_graph" model="ir.ui.view">
+            <field name="name">bike.details.graph</field>
+            <field name="model">bike.details</field>
+            <field name="arch" type="xml">
+                <graph string="bike information" stacked="True">
+                    <field name="name" type="row"/>
+                    <field name="year" type="col"/>
+                    <field name="bike_model" type="col"/>
+                    <field name="colours" type="row"/>
+                </graph>
+            </field>
+        </record>
+
+        <!--        bike details in kanban view-->
+
+        <record id='bike_view_kanban' model='ir.ui.view'>
+            <field name="name">bike.details.kanban</field>
+            <field name="model">bike.details</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="bike_model"/>
+                    <field name="picture"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <img t-att-src="kanban_image('bike.details', 'picture', record.id.raw_value)"
+                                     alt="bike" class="o_image_64_contain" style="width:100px;"/>
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title">
+                                        <field name="name"/>
+                                        <div>
+                                            <field name="bike_model"/>
+                                        </div>
+                                    </strong>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!--        Bike details pivot view -->
+        <record id="bike_view_pivot" model="ir.ui.view">
+            <field name="name">bike.details.pivot</field>
+            <field name="model">bike.details</field>
+            <field name="arch" type="xml">
+                <pivot string="bike pivot view">
+                    <field name="name" type="row"/>
+                    <field name="bike_model" type="col"/>
+                    <field name="engine" type="col"/>
+                    <field name="colours" type="col"/>
+                    <field name="year" type="col"/>
+                    <field name="cc" type="col"/>
+                </pivot>
+            </field>
+        </record>
+
+        <!--        calender view in bike details-->
+
+        <record id="view_bike_calendar" model="ir.ui.view">
+            <field name="name">bike.details.calendar</field>
+            <field name="model">bike.details</field>
+            <field name="arch" type="xml">
+                <calendar string="bikecalenderview" date_start="delivery_date" mode="month" color="name">
+                    <field name="name"/>
+                    <field name="bike_model"/>
+                    <!--                    <field name="engine"/>-->
+                    <!--                    <field name="delivery_date"/>-->
+                </calendar>
+            </field>
+        </record>
+
+
+        <record id="action_bike_details" model="ir.actions.act_window">
+            <field name="name">Bikes</field>
+            <field name="res_model">bike.details</field>
+            <field name="view_mode">tree,form,graph,kanban,pivot,calendar,search</field>
+        </record>
+
+        <!--        URL ACTION IN BIKE DETAILS MODLE-->
+        <record model="ir.actions.act_url" id="action_bike_information">
+            <field name="name">Bikedekho</field>
+            <field name="url">https://www.bikedekho.com/</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <menuitem id="bike_menu" name="Bike" action="action_bike_details" sequence="1"/>
+        <menuitem id="bike_url_menu" name="Bikedekho" action="action_bike_information" parent="bike_menu" sequence="6"/>
+    </data>
+</odoo>

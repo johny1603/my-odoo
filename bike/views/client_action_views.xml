@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_bike_client_view" model="ir.actions.client">
+            <field name="name">Bike Dashboard</field>
+            <field name="tag">bike_dash</field>
+             <field name="target">main</field>
+
+        </record>
+        <menuitem id="dashboard_bike_menu" name="Dashboard" sequence="5" parent="bike.bike_menu" action="action_bike_client_view"/>
+
+         <template id="assets_backend_bike_dashboard" name="Dashboard Asset" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+               <script type="text/javascript" src="/bike/static/src/js/bike_dash.js"/>
+             </xpath>
+        </template>
+    </data>
+</odoo>

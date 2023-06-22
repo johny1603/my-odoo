@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template id="bike_dashboard_templates" xml:space="preserve">
+    <t t-name="bikeClient">
+		<body style="background-color:green:100%">
+        <br/><br/>
+        	<div class="oh_dashboards">
+                <div class="o_dashboard" style="background-color:green;height:100%">
+           				<br/><br/>
+       				<center>
+                        <h1 style="color:red;">BIKE DASHBOARD</h1>
+                        <table class="table table-bordered mb-0" style="border: 0px solid black;"/>
+
+                    </center>
+                </div>
+            </div>
+        </body>
+    </t>
+
+    <t t-name="customerDash">
+       <marquee style="color:black"><h1>CUSTOMER INFORMATION</h1></marquee>
+        <table border="2" align="center" width="80%" height="100%" class="table table-stripped" style="color:black;">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>DOB</td>
+                    <td>Age</td>
+                    <td>City</td>
+                </tr>
+            </thead>
+            <tbody>
+                <t t-foreach="widget.data" t-as="data">
+                    <tr>
+                        <td>
+                            <t t-esc="data[0]"></t>
+                        </td>
+                        <td>
+                            <t t-esc="data[1]"></t>
+                        </td>
+                        <td>
+                            <t t-esc="data[2]"></t>
+                        </td>
+                        <td>
+                            <t t-esc="data[3]"></t>
+                        </td>
+                    </tr>
+                </t>
+            </tbody>
+        </table>
+    </t>
+
+</template>

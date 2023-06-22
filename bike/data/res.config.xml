@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!-- bike spare parts details-->
+        <record id ="spare_name1" model="spare.details">
+            <field name="name">engine</field>
+        </record>
+        <record id ="spare_name2" model="spare.details">
+            <field name="name">tyer</field>
+        </record>
+        <record id ="spare_name3" model="spare.details">
+            <field name="name">break</field>
+        </record>
+        <record id ="spare_name4" model="spare.details">
+            <field name="name">seats</field>
+        </record>
+
+    </data>
+</odoo>

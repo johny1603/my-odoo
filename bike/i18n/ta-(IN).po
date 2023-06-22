@@ -1,0 +1,1023 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bike
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-04 09:13+0000\n"
+"PO-Revision-Date: 2021-02-04 09:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_staff_details__staff_cus_ids
+msgid " Employee access"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.report,print_report_name:bike.customer_gender_report_action
+msgid "\"Gender Report\""
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.gender_report_template
+msgid ""
+"&amp;nbsp;\n"
+"                                &amp;nbsp;\n"
+"                                Customers"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.report,print_report_name:bike.customer_report
+msgid "'customer report'"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.view_customer_form
+msgid "<b>Customer Address</b>"
+msgstr ""
+
+#. module: bike
+#: model:mail.template,body_html:bike.send_mail_template
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                     Dear ${(object.name)},<br/><br/>\n"
+"                     Customer Must Be Submit Your Document Before This Month....<br/></p>\n"
+"                          Regards,<br/>\n"
+"                          ${(object.name)}\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: bike
+#: model:mail.template,body_html:bike.service_mail_template
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                     Dear ${(object.service_bike_name)},<br/><br/>\n"
+"                     Your bike service has completed you come to pick up ur bike ....<br/></p>\n"
+"                          Regards,<br/>\n"
+"                          ${(object.service_bike_number)}\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.customer_report_template
+msgid "<i>Customer Report</i>"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.view_staff_kanban
+msgid "<span>phone number:</span>"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__message_needaction
+#: model:ir.model.fields,field_description:bike.field_staff_details__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_staff_details__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_staff_details__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_staff_details__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_staff_details__staff_add
+msgid "Address"
+msgstr "முகவரி"
+
+#. module: bike
+#. openerp-web
+#: code:addons/bike/static/src/xml/bike_client_views.xml:0
+#: model:ir.model.fields,field_description:bike.field_customers_details__age
+#: model:ir.model.fields,field_description:bike.field_staff_details__age
+#: model_terms:ir.ui.view,arch_db:bike.custo_details
+#: model_terms:ir.ui.view,arch_db:bike.gender_report_template
+#, python-format
+msgid "Age"
+msgstr "வயது"
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.customer_report_template
+msgid "Age :"
+msgstr "வயது"
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__amount
+msgid "Amount"
+msgstr "தொகை"
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__message_attachment_count
+#: model:ir.model.fields,field_description:bike.field_staff_details__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: bike
+#. openerp-web
+#: code:addons/bike/static/src/xml/bike_client_views.xml:0
+#, python-format
+msgid "BIKE DASHBOARD"
+msgstr ""
+
+#. module: bike
+#: model:ir.ui.menu,name:bike.bike_menu
+msgid "Bike"
+msgstr "உந்துஉருளி"
+
+#. module: bike
+#: model:ir.actions.client,name:bike.action_bike_client_view
+msgid "Bike Dashboard"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__bike_model
+#: model:ir.model.fields,field_description:bike.field_customers_details__bike_model
+msgid "Bike Model"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.view_bike_form
+msgid "Bike Wale"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_service_details__service_bike_name
+msgid "Bike name"
+msgstr "பைக் பெயர்"
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_service_details__service_bike_number
+msgid "Bike number"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.view_bike_form
+msgid "Bike's Model"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.view_bike_form
+msgid "Bike's Name"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__bike_file
+msgid "Bike_file"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_service_details__service_bike_bill
+msgid "Bikebill"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.act_url,name:bike.action_bike_information
+#: model:ir.ui.menu,name:bike.bike_url_menu
+msgid "Bikedekho"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.act_window,name:bike.action_bike_details
+msgid "Bikes"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__cc
+msgid "CC"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.custo_details
+msgid "CUSTOMER DETAILS"
+msgstr ""
+
+#. module: bike
+#. openerp-web
+#: code:addons/bike/static/src/xml/bike_client_views.xml:0
+#, python-format
+msgid "CUSTOMER INFORMATION"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.gender_report_template
+msgid "CUSTOMER REPORT"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.customer_gender_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: bike
+#. openerp-web
+#: code:addons/bike/static/src/xml/bike_client_views.xml:0
+#: model:ir.model.fields,field_description:bike.field_customers_details__city
+#: model_terms:ir.ui.view,arch_db:bike.custo_details
+#: model_terms:ir.ui.view,arch_db:bike.gender_report_template
+#: model_terms:ir.ui.view,arch_db:bike.view_customer_form
+#, python-format
+msgid "City"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.customer_report_template
+msgid "City :"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__colours
+#: model:ir.model.fields,field_description:bike.field_customers_details__colour
+msgid "Colour"
+msgstr ""
+
+#. module: bike
+#: model:ir.ui.menu,name:bike.spare_menu
+msgid "Configration"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__count
+msgid "Count"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__country_id
+#: model_terms:ir.ui.view,arch_db:bike.view_customer_form
+msgid "Country"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__create_uid
+#: model:ir.model.fields,field_description:bike.field_customer_wizard__create_uid
+#: model:ir.model.fields,field_description:bike.field_customers_details__create_uid
+#: model:ir.model.fields,field_description:bike.field_payment_details__create_uid
+#: model:ir.model.fields,field_description:bike.field_service_details__create_uid
+#: model:ir.model.fields,field_description:bike.field_spare_details__create_uid
+#: model:ir.model.fields,field_description:bike.field_staff_details__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__create_date
+#: model:ir.model.fields,field_description:bike.field_customer_wizard__create_date
+#: model:ir.model.fields,field_description:bike.field_customers_details__create_date
+#: model:ir.model.fields,field_description:bike.field_payment_details__create_date
+#: model:ir.model.fields,field_description:bike.field_service_details__create_date
+#: model:ir.model.fields,field_description:bike.field_spare_details__create_date
+#: model:ir.model.fields,field_description:bike.field_staff_details__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.act_window,name:bike.action_customer_details
+#: model:ir.model.fields,field_description:bike.field_bike_details__customer_id
+#: model:ir.model.fields,field_description:bike.field_res_users__cus_id
+#: model:ir.ui.menu,name:bike.customer_menu
+#: model:res.groups,name:bike.group_customer
+msgid "Customer"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.server,name:bike.ir_cron_customer_ir_actions_server
+#: model:ir.cron,cron_name:bike.ir_cron_customer
+#: model:ir.cron,name:bike.ir_cron_customer
+msgid "Customer Cron"
+msgstr ""
+
+#. module: bike
+#: model:mail.template,subject:bike.send_mail_template
+msgid "Customer Email Cron Action"
+msgstr ""
+
+#. module: bike
+#: model:ir.ui.menu,name:bike.customer_wizard_menu
+msgid "Customer Gender Wizard"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_payment_details__payment_custo_id
+#: model:ir.model.fields,field_description:bike.field_service_details__custo_id
+msgid "Customer Name"
+msgstr ""
+
+#. module: bike
+#: model:ir.module.category,name:bike.module_customer_role
+msgid "Customer Role"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.server,name:bike.service_sample_server_action
+msgid "Customer Server Action"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.act_window,name:bike.customer_wizard_action
+msgid "Customer Wizard"
+msgstr ""
+
+#. module: bike
+#: model:ir.model,name:bike.model_customer_wizard
+msgid "Customer wizard report"
+msgstr ""
+
+#. module: bike
+#. openerp-web
+#: code:addons/bike/static/src/xml/bike_client_views.xml:0
+#: model:ir.model.fields,field_description:bike.field_staff_details__dob
+#: model_terms:ir.ui.view,arch_db:bike.custo_details
+#: model_terms:ir.ui.view,arch_db:bike.gender_report_template
+#, python-format
+msgid "DOB"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__damage
+msgid "Damage"
+msgstr ""
+
+#. module: bike
+#: model:ir.ui.menu,name:bike.dashboard_bike_menu
+msgid "Dashboard"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.customer_report_template
+msgid "Date of birth :"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_payment_details__payment_desc
+msgid "Description"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__details
+msgid "Details"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__display_name
+#: model:ir.model.fields,field_description:bike.field_customer_wizard__display_name
+#: model:ir.model.fields,field_description:bike.field_customers_details__display_name
+#: model:ir.model.fields,field_description:bike.field_payment_details__display_name
+#: model:ir.model.fields,field_description:bike.field_report_bike_gender_report_template__display_name
+#: model:ir.model.fields,field_description:bike.field_service_details__display_name
+#: model:ir.model.fields,field_description:bike.field_spare_details__display_name
+#: model:ir.model.fields,field_description:bike.field_staff_details__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__dob
+msgid "Dob"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__mail
+msgid "Email"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.act_window,name:bike.action_employee_details
+#: model:ir.ui.menu,name:bike.employee_menu
+#: model:res.groups,name:bike.group_employee
+msgid "Employee"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_staff_details__staff_no
+msgid "Employee ID"
+msgstr ""
+
+#. module: bike
+#: model:ir.ui.menu,name:bike.employee_details_menu
+msgid "Employee details"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__engine
+#: model:ir.model.fields,field_description:bike.field_customers_details__engine
+#: model_terms:ir.ui.view,arch_db:bike.view_bike_form
+msgid "Engine"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__bike_id
+msgid "Enter the bike info"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields.selection,name:bike.selection__customer_wizard__gender__female
+#: model:ir.model.fields.selection,name:bike.selection__customers_details__gender__female
+#: model_terms:ir.ui.view,arch_db:bike.custo_details
+#: model_terms:ir.ui.view,arch_db:bike.gender_report_template
+msgid "Female"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__message_follower_ids
+#: model:ir.model.fields,field_description:bike.field_staff_details__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__message_channel_ids
+#: model:ir.model.fields,field_description:bike.field_staff_details__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__message_partner_ids
+#: model:ir.model.fields,field_description:bike.field_staff_details__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__gender
+#: model_terms:ir.ui.view,arch_db:bike.custo_details
+msgid "Gender"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.customer_report_template
+msgid "Gender :"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.report,name:bike.customer_gender_report_action
+msgid "Gender Report"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__id
+#: model:ir.model.fields,field_description:bike.field_customer_wizard__id
+#: model:ir.model.fields,field_description:bike.field_customers_details__id
+#: model:ir.model.fields,field_description:bike.field_payment_details__id
+#: model:ir.model.fields,field_description:bike.field_report_bike_gender_report_template__id
+#: model:ir.model.fields,field_description:bike.field_service_details__id
+#: model:ir.model.fields,field_description:bike.field_spare_details__id
+#: model:ir.model.fields,field_description:bike.field_staff_details__id
+msgid "ID"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_staff_details__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,help:bike.field_staff_details__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,help:bike.field_customers_details__message_needaction
+#: model:ir.model.fields,help:bike.field_customers_details__message_unread
+#: model:ir.model.fields,help:bike.field_staff_details__message_needaction
+#: model:ir.model.fields,help:bike.field_staff_details__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,help:bike.field_customers_details__message_has_error
+#: model:ir.model.fields,help:bike.field_customers_details__message_has_sms_error
+#: model:ir.model.fields,help:bike.field_staff_details__message_has_error
+#: model:ir.model.fields,help:bike.field_staff_details__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__message_is_follower
+#: model:ir.model.fields,field_description:bike.field_staff_details__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details____last_update
+#: model:ir.model.fields,field_description:bike.field_customer_wizard____last_update
+#: model:ir.model.fields,field_description:bike.field_customers_details____last_update
+#: model:ir.model.fields,field_description:bike.field_payment_details____last_update
+#: model:ir.model.fields,field_description:bike.field_report_bike_gender_report_template____last_update
+#: model:ir.model.fields,field_description:bike.field_service_details____last_update
+#: model:ir.model.fields,field_description:bike.field_spare_details____last_update
+#: model:ir.model.fields,field_description:bike.field_staff_details____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__write_uid
+#: model:ir.model.fields,field_description:bike.field_customer_wizard__write_uid
+#: model:ir.model.fields,field_description:bike.field_customers_details__write_uid
+#: model:ir.model.fields,field_description:bike.field_payment_details__write_uid
+#: model:ir.model.fields,field_description:bike.field_service_details__write_uid
+#: model:ir.model.fields,field_description:bike.field_spare_details__write_uid
+#: model:ir.model.fields,field_description:bike.field_staff_details__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__write_date
+#: model:ir.model.fields,field_description:bike.field_customer_wizard__write_date
+#: model:ir.model.fields,field_description:bike.field_customers_details__write_date
+#: model:ir.model.fields,field_description:bike.field_payment_details__write_date
+#: model:ir.model.fields,field_description:bike.field_service_details__write_date
+#: model:ir.model.fields,field_description:bike.field_spare_details__write_date
+#: model:ir.model.fields,field_description:bike.field_staff_details__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__message_main_attachment_id
+#: model:ir.model.fields,field_description:bike.field_staff_details__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields.selection,name:bike.selection__customer_wizard__gender__male
+#: model:ir.model.fields.selection,name:bike.selection__customers_details__gender__male
+#: model_terms:ir.ui.view,arch_db:bike.custo_details
+#: model_terms:ir.ui.view,arch_db:bike.gender_report_template
+msgid "Male"
+msgstr ""
+
+#. module: bike
+#: model:res.groups,name:bike.group_manager
+msgid "Manager"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__message_has_error
+#: model:ir.model.fields,field_description:bike.field_staff_details__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__message_ids
+#: model:ir.model.fields,field_description:bike.field_staff_details__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: bike
+#. openerp-web
+#: code:addons/bike/static/src/xml/bike_client_views.xml:0
+#: model:ir.model.fields,field_description:bike.field_bike_details__name
+#: model:ir.model.fields,field_description:bike.field_customers_details__name
+#: model:ir.model.fields,field_description:bike.field_staff_details__staff_name
+#: model_terms:ir.ui.view,arch_db:bike.custo_details
+#: model_terms:ir.ui.view,arch_db:bike.gender_report_template
+#, python-format
+msgid "Name"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.customer_report_template
+msgid "Name :"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_staff_details__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_staff_details__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_staff_details__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields.selection,name:bike.selection__bike_details__damage__no
+msgid "No"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__message_needaction_counter
+#: model:ir.model.fields,field_description:bike.field_staff_details__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__message_has_error_counter
+#: model:ir.model.fields,field_description:bike.field_staff_details__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,help:bike.field_customers_details__message_needaction_counter
+#: model:ir.model.fields,help:bike.field_staff_details__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,help:bike.field_customers_details__message_has_error_counter
+#: model:ir.model.fields,help:bike.field_staff_details__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,help:bike.field_customers_details__message_unread_counter
+#: model:ir.model.fields,help:bike.field_staff_details__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.view_staff_form
+msgid "Open Customer"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields.selection,name:bike.selection__bike_details__status__order
+msgid "Order"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields.selection,name:bike.selection__customer_wizard__gender__other
+msgid "Other"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields.selection,name:bike.selection__customers_details__gender__others
+#: model_terms:ir.ui.view,arch_db:bike.gender_report_template
+#: model_terms:ir.ui.view,arch_db:bike.view_res_users_inherit_form
+msgid "Others"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.act_window,name:bike.action_payment_details
+#: model:ir.ui.menu,name:bike.payment_menu
+#: model_terms:ir.ui.view,arch_db:bike.view_bike_form
+msgid "Payment"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_payment_details__payment_amount
+msgid "Payment Amount"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_payment_details__payment_date
+msgid "Payment Date"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_staff_details__staff_phone
+msgid "Phone"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__picture
+msgid "Picture"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_service_details__service_price
+msgid "Price"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.view_customer_form
+msgid "Product"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields.selection,name:bike.selection__bike_details__status__progress
+#: model_terms:ir.ui.view,arch_db:bike.view_bike_form
+msgid "Progress"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__records
+msgid "Records"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.report,name:bike.customer_report
+msgid "Report"
+msgstr ""
+
+#. module: bike
+#: model:ir.ui.menu,name:bike.wizard_menu
+msgid "Reports"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_staff_details__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.gender_report_template
+msgid "S.No"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__message_has_sms_error
+#: model:ir.model.fields,field_description:bike.field_staff_details__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__staff_id
+msgid "Salesman"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customer_wizard__gender
+msgid "Select Gender"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.act_window,name:bike.action_service_details
+#: model:ir.ui.menu,name:bike.service_menu
+msgid "Service"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_service_details__service_bike_desc
+msgid "Service Bike Desc"
+msgstr ""
+
+#. module: bike
+#: model:mail.template,subject:bike.service_mail_template
+msgid "Service Email Cron Action"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.view_service_form
+msgid "Service Mail"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_service_details__service_bike_no
+msgid "Service bike No"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_service_details__service_charge
+msgid "Service charge"
+msgstr ""
+
+#. module: bike
+#: model:ir.ui.menu,name:bike.service_menu1
+msgid "Service details"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.act_window,name:bike.action_spare_details
+#: model:ir.model.fields,field_description:bike.field_spare_details__name
+msgid "Spares"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_res_users__emp_id
+#: model:ir.ui.menu,name:bike.staff_menu
+msgid "Staff"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__state_id
+#: model_terms:ir.ui.view,arch_db:bike.view_customer_form
+msgid "State"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__status
+msgid "Status"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,help:bike.field_staff_details__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.gender_report_template
+msgid "Street"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__street1
+msgid "Street 1"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__street2
+msgid "Street 2"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.view_customer_form
+msgid "Street 2..."
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.view_customer_form
+msgid "Street..."
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.customer_gender_wizard_form
+msgid "Submit"
+msgstr ""
+
+#. module: bike
+#: model:res.groups,comment:bike.group_customer
+#: model:res.groups,comment:bike.group_employee
+#: model:res.groups,comment:bike.group_manager
+msgid "This user can access only his details"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_service_details__total_amount
+msgid "Total"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_service_details__service_bike_type
+msgid "Type"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,help:bike.field_staff_details__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__message_unread
+#: model:ir.model.fields,field_description:bike.field_staff_details__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__message_unread_counter
+#: model:ir.model.fields,field_description:bike.field_staff_details__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: bike
+#: model:ir.model,name:bike.model_res_users
+msgid "Users"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__website_message_ids
+#: model:ir.model.fields,field_description:bike.field_staff_details__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,help:bike.field_customers_details__website_message_ids
+#: model:ir.model.fields,help:bike.field_staff_details__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__year
+msgid "Year"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields.selection,name:bike.selection__bike_details__damage__yes
+msgid "Yes"
+msgstr ""
+
+#. module: bike
+#: code:addons/bike/model/bikes.py:0
+#, python-format
+msgid "You cannot delete Good Condition bikes"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_customers_details__zip
+#: model_terms:ir.ui.view,arch_db:bike.view_customer_form
+msgid "ZIP"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.gender_report_template
+msgid "Zip"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.bike_view_kanban
+#: model_terms:ir.ui.view,arch_db:bike.view_bike_tree
+msgid "bike"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.bike_view_graph
+msgid "bike information"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.bike_view_pivot
+msgid "bike pivot view"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.view_bike_calendar
+msgid "bikecalenderview"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__delivery_date
+msgid "delivery_date"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields,field_description:bike.field_bike_details__bike_con
+msgid "good condition"
+msgstr ""
+
+#. module: bike
+#: model:ir.model,name:bike.model_staff_details
+msgid "its has maintain staff all details"
+msgstr ""
+
+#. module: bike
+#: model:ir.model,name:bike.model_service_details
+msgid "its has maintain to bike service details"
+msgstr ""
+
+#. module: bike
+#: model:ir.model,name:bike.model_payment_details
+msgid "its maintain payment details"
+msgstr ""
+
+#. module: bike
+#: model:ir.model,name:bike.model_spare_details
+msgid "its maintain to bike spare parts details"
+msgstr ""
+
+#. module: bike
+#: model:ir.model,name:bike.model_bike_details
+msgid "its to maintain information about bike details"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.view_bike_form
+msgid "order"
+msgstr ""
+
+#. module: bike
+#: model:ir.model.fields.selection,name:bike.selection__bike_details__status__payment
+msgid "payment"
+msgstr ""
+
+#. module: bike
+#: model:ir.model,name:bike.model_report_bike_gender_report_template
+msgid "report.bike.gender_report_template"
+msgstr ""
+
+#. module: bike
+#: model:ir.actions.act_window,name:bike.action_staff_details
+msgid "staff"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.staff_view_activity
+msgid "staff information"
+msgstr ""
+
+#. module: bike
+#: model_terms:ir.ui.view,arch_db:bike.view_staff_search
+msgid "staff_search"
+msgstr ""
+
+#. module: bike
+#: model:ir.model,name:bike.model_customers_details
+msgid "this record maintain to customer record"
+msgstr ""

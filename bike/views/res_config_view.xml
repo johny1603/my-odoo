@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_spare_tree" model="ir.ui.view">
+        <field name="name">spare.details.tree</field>
+        <field name="model">spare.details</field>
+
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"></field>
+            </tree>
+        </field>
+        </record>
+
+        <record id="action_spare_details" model="ir.actions.act_window">
+            <field name="name">Spares</field>
+            <field name="res_model">spare.details</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <menuitem id="spare_menu" name="Configration" action="action_spare_details" parent="service_menu"/>
+    </data>
+
+</odoo>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--        Customer Form view-->
+
+        <record id="view_customer_form" model="ir.ui.view">
+            <field name="name">customers.details.form</field>
+            <field name="model">customers.details</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+
+                        <div name="button_box" class="oe_button_box">
+                            <button name="get_cus_details"
+                                    class="oe_stat_button"
+                                    icon="fa-archive"
+                                    type="object"
+                                    string=" Product">
+                            </button>
+                        </div>
+
+                        <group>
+                            <group>
+                                <field name="name"></field>
+                                <field name="dob"></field>
+                                <field name="gender"></field>
+                                <field name="age"></field>
+                                <field name="mail"></field>
+                            </group>
+                            <group>
+                                <label for="" name="address_name">
+                                    <b>Customer Address</b>
+                                </label>
+                                <div class="o_address_format">
+                                    <field name="street1" placeholder="Street..." class="o_address_street"/>
+                                    <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                                    <field name="city" placeholder="City" class="o_address_city"/>
+                                    <field name="state_id" class="o_address_state"
+                                           domain="[('country_id', '=', country_id)]" placeholder="State"/>
+                                    <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                    <field name="country_id" placeholder="Country" class="o_address_country"/>
+                                </div>
+                            </group>
+                        </group>
+
+                        <group>
+                            <field name="staff_id"/>
+                        </group>
+                        <group>
+                            <field name="bike_id" options="{'no_create_edit': True}"></field>
+                            <field name="bike_model"></field>
+                            <field name="engine"></field>
+                            <field name="colour"></field>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <!--Customer Treeview-->
+        <record id="view_customer_tree" model="ir.ui.view">
+            <field name="name">customers.details.tree</field>
+            <field name="model">customers.details</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"></field>
+                    <field name="dob"></field>
+                    <field name="gender"></field>
+                    <field name="bike_id"></field>
+                    <field name="staff_id"></field>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_customer_details" model="ir.actions.act_window">
+            <field name="name">Customer</field>
+            <field name="res_model">customers.details</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="customer_menu" name="Customer" action="action_customer_details" sequence="3" parent="bike_menu"/>
+
+        <!--        staff details model form view-->
+
+        <record id="view_staff_form" model="ir.ui.view">
+            <field name="name">staff.details.form</field>
+            <field name="model">staff.details</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="open_customer" type="object" string="Open Customer" class="oe_stat_button" icon="fa-arrow-circle-right"/>
+                        </div>
+                        <group>
+                            <field name="staff_no"></field>
+                            <field name="staff_name"></field>
+                            <field name="staff_phone"></field>
+                            <field name="staff_add"></field>
+                            <field name="staff_cus_ids"></field>
+                            <field name="age"></field>
+                            <field name="dob"></field>
+<!--                            <field name="bike_id"></field>-->
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--      xpath used in form view-->
+
+        <record id="view_staff_inherit_form" model="ir.ui.view">
+            <field name="name">staff.details.inherit.form</field>
+            <field name="model">staff.details</field>
+            <field name="mode">primary</field>
+            <field name="priority">20</field>
+            <field name="inherit_id" ref="view_staff_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name= 'staff_add']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='staff_name']" position="after">
+                    <field name="age"/>
+                </xpath>
+                <xpath expr="//field[@name='staff_cus_ids']" position="before">
+                    <field name="staff_name"/>
+                </xpath>
+                <xpath expr="//field[@name='staff_name']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='staff_phone']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='age']" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!--        staff details tree view-->
+
+        <record id="view_staff_tree" model="ir.ui.view">
+            <field name="name">staff.details.tree</field>
+            <field name="model">staff.details</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="staff_name"></field>
+                    <field name="staff_phone"></field>
+                    <field name="staff_add"></field>
+                    <field name="staff_cus_ids"></field>
+                    <field name="dob"></field>
+                    <field name="age"></field>
+                </tree>
+            </field>
+        </record>
+
+
+        <!--        staff records kanban view-->
+
+        <record id="view_staff_kanban" model="ir.ui.view">
+            <field name="name">staff.details.kanban</field>
+            <field name="model">staff.details</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="staff_name"/>
+                    <field name="staff_phone"/>
+                    <field name="staff_add"/>
+                    <field name="age"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div>
+                                    <strong>
+                                        <field name="staff_name"/>
+                                    </strong>
+                                </div>
+                                <div>
+                                    <span>phone number:</span>
+                                    <field name="staff_phone"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!--        staff activity view-->
+
+        <record id="staff_view_activity" model="ir.ui.view">
+            <field name="name">staff.details.activity</field>
+            <field name="model">staff.details</field>
+            <field name="arch" type="xml">
+                <activity string="staff information">
+                    <templates>
+                        <div t-name="activity-box">
+                            <div>
+                                <field name="staff_name" display="full"/>
+                                <field name="staff_phone" muted="1" display="full"/>
+                                <field name="staff_add" display="full"/>
+                            </div>
+                        </div>
+                    </templates>
+                </activity>
+            </field>
+        </record>
+
+        <!--        Staff search view-->
+        <record id="view_staff_search" model="ir.ui.view">
+            <field name="name">staff.details.search</field>
+            <field name="model">staff.details</field>
+            <field name="arch" type="xml">
+                <search string="staff_search">
+                    <field name="staff_name"/>
+                    <field name="staff_phone"/>
+                    <field name="staff_add"/>
+                    <field name="age"/>
+                </search>
+            </field>
+        </record>
+
+
+        <record id="action_staff_details" model="ir.actions.act_window">
+            <field name="name">staff</field>
+            <field name="res_model">staff.details</field>
+            <field name="view_mode">tree,form,kanban,activity,search</field>
+        </record>
+
+        <record id="action_employee_details" model="ir.actions.act_window">
+            <field name="name">Employee</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">staff.details</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids"
+                   eval="[(5,0,0),
+                           (0, 0, {'view_mode': 'tree', 'view_id': ref('view_staff_tree')}),
+                           (0, 0, {'view_mode': 'form', 'view_id': ref('view_staff_inherit_form')})]"/>
+        </record>
+
+
+        <!--        RECORD RULE-->
+        <record id="view_res_users_inherit_form" model="ir.ui.view">
+            <field name="name">res.user.inherit.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[2]" position="after">
+                    <page string="Others">
+                        <group>
+                            <field name="emp_id"/>
+                            <field name="cus_id"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <menuitem id="staff_menu" name="Staff" action="action_staff_details" parent="bike_menu" sequence="2"/>
+        <menuitem id="employee_menu" name="Employee" action="action_staff_details" parent="staff_menu"/>
+        <menuitem id="employee_details_menu" name="Employee details" action="action_employee_details"
+                  parent="staff_menu"/>
+    </data>
+</odoo>

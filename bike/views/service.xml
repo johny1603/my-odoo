@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--        Service Form view-->
+        <record id="view_service_form" model="ir.ui.view">
+            <field name="name">service.details.form</field>
+            <field name="model">service.details</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <button name="send_pay_mail" type="object" string="Service Mail" class="btn btn-outline-danger"/>
+                        <group>
+                            <group>
+                                <field name="service_bike_no"></field>
+                                <field name="service_bike_number"></field>
+                                <field name="service_bike_type"></field>
+                                <field name="service_bike_name"></field>
+                                <field name="service_bike_bill" widget="image" class="oe_avatar"></field>
+                                <field name="service_bike_desc"></field>
+                            </group>
+                            <group>
+                                <field name="service_price"></field>
+                                <field name="service_charge"></field>
+                                <field name="custo_id"></field>
+                                <field name="total_amount"></field>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--        Service tree view-->
+        <record id="view_service_tree" model="ir.ui.view">
+            <field name="name">service.details.tree</field>
+            <field name="model">service.details</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="service_bike_no"></field>
+                    <field name="service_bike_number"></field>
+                    <field name="service_bike_type"></field>
+                    <field name="service_bike_name"></field>
+                    <field name="service_bike_bill"></field>
+                    <field name="service_bike_desc"></field>
+                    <field name="service_price"></field>
+                    <field name="service_charge"></field>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_service_details" model="ir.actions.act_window">
+            <field name="name">Service</field>
+            <field name="res_model">service.details</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--        Server Action use in Customer model-->
+
+        <record model="ir.actions.server" id="service_sample_server_action">
+            <field name="name">Customer Server Action</field>
+            <field name="model_id" ref="model_customers_details"/>
+            <field name="binding_model_id" ref="model_customers_details"/>
+            <field name="state">code</field>
+            <field name="code">
+                model.browse(model._context.get('active_ids',[])).customer_server_action()
+            </field>
+        </record>
+
+
+        <menuitem id="service_menu" name="Service" action="action_service_details" sequence="4" parent="bike_menu"/>
+        <menuitem id="service_menu1" name="Service details" action="action_service_details" parent="service_menu"/>
+    </data>
+</odoo>

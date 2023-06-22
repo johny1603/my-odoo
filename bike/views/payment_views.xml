@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+          <record id="view_payment_form" model="ir.ui.view">
+            <field name="name">payment.details.form</field>
+            <field name="model">payment.details</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="payment_custo_id"></field>
+                                <field name="payment_date"></field>
+                                <field name="payment_amount"></field>
+                                <field name="payment_desc"></field>
+                                </group>
+                            </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_payment_tree" model="ir.ui.view">
+            <field name="name">payment.details.tree</field>
+            <field name="model">payment.details</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="payment_custo_id"></field>
+                    <field name="payment_date"></field>
+                    <field name="payment_amount"></field>
+                    <field name="payment_desc"></field>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_payment_details" model="ir.actions.act_window">
+            <field name="name">Payment</field>
+            <field name="res_model">payment.details</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+                <menuitem id="payment_menu" name="Payment" action="action_payment_details" sequence="4" parent="bike_menu"/>
+
+
+    </data>
+</odoo>

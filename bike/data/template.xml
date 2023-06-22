@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="custo_details">
+            <t t-call="website.layout">
+                <div class="page" align="center">
+                    <div class="oh_dashboard" style="background-color:blue;height:100%">
+                        <i>
+                            <center>CUSTOMER DETAILS</center>
+                        </i>
+                        <table border="3px" width="50%">
+                            <tr>
+                                <th>Name</th>
+                                <th>DOB</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>City</th>
+                            </tr>
+                            <t t-foreach="custo_data" t-as="cus">
+                                <tr>
+                                    <td>
+                                        <t t-esc="cus['Name']"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="cus['Dob']"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="cus['Age']"/>
+                                    </td>
+                                    <td t-if="cus['Gender'] == 'male'">
+<!--                                        <t t-esc="cus['Gender']"/>-->
+                                        <span t-esc="male">Male</span>
+                                    </td>
+                                    <td t-if="cus['Gender'] == 'female'">
+                                        <span t-esc="female">Female</span>
+
+                                    </td>
+                                    <td>
+                                        <t t-esc="cus['City']"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
